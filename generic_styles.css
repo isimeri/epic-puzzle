@@ -1,0 +1,272 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --bg-color-dark: #444;  /*for the striped bg*/
+    --bg-color-darker: #111;
+    --bg-color2: #050705;
+    --accent: #6FC38E;
+}
+body, .btn-link{
+    font-family: "Source Code Pro", monospace;
+    color: var(--accent);
+}
+.supreme-container{
+    background: var(--bg-color2);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+.header{
+    margin-bottom: 50px;
+}
+.home-btn{
+    position: absolute;
+    top: 50px;
+    left: 80px;
+    border: 4px solid var(--accent);
+    padding: 0.4rem 1rem;
+    font-size: 2rem;
+    color: var(--accent);
+    text-decoration: none;
+    font-family: "Joystix Monospace", monospace;
+}
+.home-btn:hover{
+    color: hsl(142, 41%, 70%);
+    border-color: hsl(142, 41%, 70%);;
+}
+.validating{
+    height: 2em;
+    padding: 0.5em;
+    font-size: 0.8em;
+    display: flex;
+    align-items: flex-start;
+    min-width: 400px;
+    margin-bottom: 50px;
+}
+#arrows{
+    /* color: rgb(221, 178, 85); */
+    color: rgb(167, 151, 105);
+}
+.btn-link{
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--accent);
+    padding: 0.4rem 1rem;
+    background: inherit;
+    border: 4px solid var(--accent);
+    cursor: pointer;
+    transition: all 0.1s ease;
+    margin-bottom: 50px;
+    display: none;
+    position: absolute;
+}
+#btn-link1{
+    top: 10vh;
+    left: 5vw;
+}
+#btn-link2{
+    top: 85vh;
+    left: 25vw;
+}
+#btn-link3{
+    top: 45vh;
+    left: 65vw;
+}
+#btn-link4{
+    top: 5vh;
+    left: 80vw;
+}
+#btn-link5{
+    top: 60vh;
+    left: 10vw;
+}
+#btn-link6{
+    top: 20vh;
+    left: 45vw;
+}
+.btn-link:hover{
+    background-color: rgba(255,255,255,0.1);
+}
+.cb-container{
+    position: relative;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+label{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    width: 70px;
+    border-radius: 40%;
+    cursor: pointer;
+}
+label::before{
+    cursor: pointer;
+    content: "";
+    height: 50px;
+    width: 50px;
+    background-color: var(--accent);
+    box-shadow: 0 10px 0 -5px var(--accent),
+                0 -10px 0 -5px var(--accent),
+                10px 0 0 -5px var(--accent),
+                -10px 0 0 -5px var(--accent),
+                0 20px 0 -10px var(--accent),
+                0 -20px 0 -10px var(--accent),
+                20px 0 0 -10px var(--accent),
+                -20px 0 0 -10px var(--accent);
+
+}
+label::after{
+    cursor: pointer;
+    position: absolute;
+    content: "";
+    height: 30px;
+    width: 30px;
+    pointer-events: none;
+    background-color: #575;
+    box-shadow: 0 10px 0 -5px #575,
+                0 -10px 0 -5px #575,
+                10px 0 0 -5px #575,
+                -10px 0 0 -5px #575;
+}
+label:hover::before, .cb:hover + label::before{
+    background-color: hsl(142, 41%, 40%);
+    box-shadow: 0 10px 0 -5px hsl(142, 41%, 40%),
+                0 -10px 0 -5px hsl(142, 41%, 40%),
+                10px 0 0 -5px hsl(142, 41%, 40%),
+                -10px 0 0 -5px hsl(142, 41%, 40%),
+                0 20px 0 -10px hsl(142, 41%, 40%),
+                0 -20px 0 -10px hsl(142, 41%, 40%),
+                20px 0 0 -10px hsl(142, 41%, 40%),
+                -20px 0 0 -10px hsl(142, 41%, 40%);
+
+}
+label:hover::after, .cb:hover + label::after{
+    background-color: #6fc38e;
+    box-shadow: 0 10px 0 -5px #6fc38e,
+                0 -10px 0 -5px #6fc38e,
+                10px 0 0 -5px #6fc38e,
+                -10px 0 0 -5px #6fc38e;
+}
+.btn-led{
+    background-color: #555;
+    height: 20px;
+    width: 20px;
+    border-radius: 30%;
+    box-shadow: none;
+}
+.cb:checked ~ .btn-led{
+    background-color: rgb(73, 255, 209);
+    box-shadow: 0 0 5px 3px rgb(73, 255, 209);
+}
+.cb{
+    position: absolute;
+    /* pointer-events: none; */
+    opacity: 0;
+}
+.scan-div{                  /*the striped bg*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    pointer-events: none;
+    background: linear-gradient(to bottom, var(--bg-color-dark) 50%, var(--bg-color-darker) 50%);
+    background-repeat: repeat-y;
+    background-size: 100% 4px;
+    opacity: 0.2;
+}
+.scan-div::before{          /*the moving scan line*/
+    content: "";
+    position: absolute;
+    opacity: 0.06;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 20px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, #6fc38e 50%, rgba(0,0,0,0.95) 51%, rgba(0,255,255,0) 100%);
+    animation: scan 6s linear infinite;
+}
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background-color: rgba(255,255,255,0.05);
+    padding: 2rem;
+    min-width: 400px;
+}
+
+input[type="text"]{
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(to bottom, rgb(7,9,7) 50%, rgb(18,19,18));
+    background-size: 100% 4px;
+    color: var(--accent);
+    font-family: "Source Code Pro", monospace;
+    border: 1px solid var(--accent);
+}
+input:disabled{
+    color: #777;
+    background: linear-gradient(to bottom, rgb(35,38,35) 50%, rgb(25,26,25));
+    border-color: #888;
+}
+
+.form-btn, .form-btn2{
+    font-size: 1em;
+    font-family: "Source Code Pro", monospace;
+    background-color: var(--accent);
+    border: none;
+    padding: 0.5em 3em;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+.form-btn:hover{
+    background-color: hsl(142, 41%, 70%);
+}
+.form-btn:disabled{
+    background-color: #888;
+    color: #333;
+    cursor: default;
+}
+
+.modal{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 0 1000px rgb(0,0,0,0.8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+    min-width: 200px;
+    border: 4px solid var(--accent);
+}
+.modal.wrong-person{
+    padding: 2rem;
+    background: inherit;
+}
+
+
+@keyframes scan{
+    0%{
+        top: 0%;
+    }
+    100%{
+        top: 100%;
+    }
+}

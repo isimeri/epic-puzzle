@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-info="p4">Epic Puzzle</title>
+    <link rel="stylesheet" href="../generic_styles.css">
+    <script src="../js/page4.js" type="module" defer></script>
+    <script src="../js/progressButton.js"></script>
+    <style>
+        .cb-container{
+            position: absolute;
+            top: 15%;
+            left: 35%;
+        }
+    </style>
+</head>
+<body>
+    <div class="supreme-container">
+        <div class="scan-div"></div>
+        <a href="../index.html" class="home-btn">H</a>
+        <h2 class="header">1, 2, 1, 2...</h2>
+
+        <div class="form-container">
+            <h3 class="form-header">Răspunsul tău:</h3>
+            <input type="text" name="answer" id="answer">
+            <button class="form-btn">Submit</button>
+        </div>
+        <div class="validating"></div>
+        <!-- vladigor vordon isimeri.github.io/epic-puzzle/html/a_little_sad.html -->
+
+        <div class="cb-container">
+            <input type="checkbox" name="cb" id="progress-cb" class="cb" onchange="updateProgressButtons(this)">    <!--hidden -->
+            <label for="progress-cb"></label>
+            <div class="btn-led"></div>
+        </div>
+    </div>
+</body>
+</html>

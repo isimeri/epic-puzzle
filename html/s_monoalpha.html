@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-info="s1">Epic Puzzle</title>
+    <link rel="stylesheet" href="../generic_styles.css">
+    <style>
+        .supreme-container{
+            padding-top: 30vh;
+            justify-content: start;
+        }
+        .alpha-matrix{
+            --accent: #6FC38E;
+            font-size: 1.5rem;
+            padding: 2rem 3rem;
+            border: 1px solid var(--accent);
+            background: rgba(0,0,0,0.6);
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="supreme-container"> <!--Cauți ceva aici, tovarășă?-->
+        <div class="scan-div"></div>
+        <a href="../index.html" class="home-btn">H</a>
+        <h2 class="header">Studiază cu atenție</h2>
+        <h2 class="header">ywusqomkgiecazxvtprnljhfdb</h2>
+
+        <div class="alpha-matrix" style="display: none">r a o t d f x z <br>
+            x c i e l m p q <br>
+            s b g j r k n v <br>
+            o e r p v e a g <br>
+            n i f s d p z q <br>
+            k t y w h e a u <br>
+            p d b r w d o i <br>
+            u f r d k w e y</div>
+            <!-- hmmmmmmmmm -->
+    </div>
+
+    <script>
+        if(parseInt(sessionStorage.getItem("progress")) < 20 || !(sessionStorage.getItem("progress"))){
+            sessionStorage.setItem("progress", 20);
+        }
+    </script>
+</body>
+</html>

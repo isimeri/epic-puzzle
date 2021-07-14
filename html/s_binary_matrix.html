@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-info="s2">Epic Puzzle</title>
+    <link rel="stylesheet" href="../generic_styles.css">
+    <style>
+        .supreme-container{
+            padding-top: 30vh;
+            justify-content: start;
+        }
+        .number-matrix{
+            --accent: #6FC38E;
+            font-size: 1.5rem;
+            padding: 2rem 3rem;
+            border: 1px solid var(--accent);
+            background: rgba(0,0,0,0.6);
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="supreme-container">
+        <div class="scan-div"></div>
+        <a href="../index.html" class="home-btn">H</a>
+        
+        <div class="number-matrix">0 0 0 0 0 0 0 0 <br>
+            0 1 0 0 0 0 0 0<br>
+            0 0 0 0 0 0 0 0<br>
+            1 0 0 0 1 0 0 0<br>
+            0 0 1 0 0 0 0 0<br>
+            0 0 0 0 0 1 0 0<br>
+            0 0 0 0 0 0 0 0<br>
+            0 1 0 0 0 0 1 0</div>
+    </div>
+
+    <script>
+        if(parseInt(sessionStorage.getItem("progress")) < 20 || !(sessionStorage.getItem("progress"))){
+            sessionStorage.setItem("progress", 20);
+        }
+    </script>
+</body>
+</html>

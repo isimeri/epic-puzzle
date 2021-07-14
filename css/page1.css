@@ -1,0 +1,29 @@
+:root{
+    --bg-color-dark: #444;  /*for the striped bg*/
+    --bg-color-darker: #111;
+    --bg-color2: #050705;
+    --accent: #6FC38E;
+}
+.numbers-wrapper{
+    margin-bottom: 50px;
+}
+.number-row{
+    font-size: 1.6rem;
+}
+/* .form-container{
+    margin-bottom: 50px;
+} */
+.hint{
+    background-color: rgba(0,0,0,0.4);
+    border: 1px dashed var(--accent); 
+    border-left: none;
+    border-right: none;
+    padding: 1rem 3rem;
+    font-family: "Joystix Monospace", monospace;
+    opacity: 0;
+}
+.cb-container{
+    position: absolute;
+    top: 50%;
+    left: 80px;
+}

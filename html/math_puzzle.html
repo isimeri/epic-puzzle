@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-info="p1">Epic Puzzle</title>
+    <link rel="stylesheet" href="../generic_styles.css">
+    <link rel="stylesheet" href="../css/page1.css">
+    <script src="../js/page1.js" type="module" defer></script>
+    <script src="../js/generic.js" type="module" defer></script>
+    <script src="../js/progressButton.js" defer></script>
+</head>
+<body>
+    <div class="supreme-container">
+        <div class="scan-div"></div>
+        <a href="../index.html" class="home-btn">H</a>
+        <div class="numbers-wrapper">
+            <p class="number-row">1905 : 24</p>
+            <p class="number-row">1032 : 42</p>
+            <p class="number-row">2048 : 68</p>
+            <p class="number-row">1009 : ?</p>
+        </div>
+        <div class="form-container">
+            <h3 class="form-header">Răspunsul tău:</h3>
+            <input type="text" name="answer" id="number-answer">
+            <button class="form-btn">Submit</button>
+        </div>
+        <div class="validating"></div>
+        <div class="hint">
+            Brutus??!!_2
+        </div>
+
+        <div class="cb-container">
+            <input type="checkbox" name="cb" id="progress-cb" class="cb" onchange="updateProgressButtons(this)">    <!--hidden -->
+            <label for="progress-cb"></label>
+            <div class="btn-led"></div>
+        </div>
+    </div>
+</body>
+</html>

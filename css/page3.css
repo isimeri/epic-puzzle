@@ -1,0 +1,28 @@
+:root{
+    --bg-color-dark: #444;
+    --bg-color-darker: #111;
+    --bg-color2: #050705;
+    --accent: #6FC38E;
+}
+.header{
+    margin-bottom: 20px;
+}
+.img-container{
+    min-height: 100px;
+    width: 400px;
+    border: 1px solid var(--accent);
+    padding: 30px 15px;
+    margin-bottom: 50px;
+}
+.missing-file{
+    /* width: 50px; */
+    height: 40px;
+    padding: 0;
+    margin-bottom: 20px;
+    /* background-color: orange; */
+}
+.cb-container{
+    position: absolute;
+    top: 35%;
+    left: 80%;
+}

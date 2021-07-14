@@ -1,0 +1,130 @@
+:root{
+    --data-pos: 1;
+    --l-height: 1.5rem;
+}
+.supreme-container{
+    padding-top: 20vh;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+#btn-s1{
+    display: block;
+    top: 20%;
+    left: 90%;
+}
+.section1{
+    display: flex;
+    width: 100%;
+    max-width: calc(90ch + 4rem);
+    padding: 1rem 4rem;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8rem;
+    background: linear-gradient(to bottom,  hsl(120, 3%, 12%) 50%, hsl(120, 13%, 8%) 50%);
+    background-size: 100% 4px;
+    margin-bottom: 50px;
+    position: relative;
+}
+.form-container{
+    align-items: flex-start;
+    padding-left: 0;
+    padding-bottom: 0.5rem;
+    padding-top: 1rem;
+}
+.validating{
+    margin-bottom: 0;
+}
+.fetcharoo{
+    padding: 1rem;
+    display: block;
+    font-size: 1em;
+    background: transparent;
+    position: static;
+    margin-bottom: 0;
+}
+.fetcharoo:disabled{
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #444;
+    color: #444;
+    cursor: default;
+}
+.ggdiv{
+    box-sizing: content-box;
+    width: 90ch;
+    background: linear-gradient(to bottom,  hsl(120, 3%, 12%) 50%, hsl(120, 13%, 8%) 50%);
+    background-size: 100% 4px;
+    font-size: 1rem;
+    position: relative;
+    line-height: var(--l-height);
+    margin-top: -2px;
+    padding: 24px 32px;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: all 0.5s ease-out;
+}
+.ggdiv.open{
+    transform: scaleY(1);
+}
+.ggdiv.open .inner-ggdiv{
+    position: absolute;
+    height: var(--l-height);
+    width: 90ch;
+    background: linear-gradient(to bottom,  hsl(120, 3%, 12%) 50%, hsl(120, 13%, 8%) 50%);
+    background-size: 100% 4px;
+    position: absolute;
+    top: calc(var(--data-pos) * var(--l-height));
+    transform-origin: right;
+    animation: typewriter 8s steps(90) calc(var(--data-pos) * 8s - 6.7s) 1 forwards;
+}
+.ggdiv.open .inner-ggdiv.eight{
+    animation: shortType 2s steps(20) calc(var(--data-pos) * 8s - 6.7s) 1 forwards;
+}
+.inner-ggdiv::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 2px;
+    background-color: #6FC38E;
+    display: var(--data-vis);
+    animation: cursorBlink 0.7s linear 0s infinite;
+}
+
+.random-container2{
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    bottom: 5%;
+    left: 3%;
+}
+#btn-s2{
+    display: block;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 0;
+}
+@keyframes typewriter{
+    0%{
+        transform: scaleX(1);
+    }
+    100%{
+        transform: scaleX(0);
+    }
+}
+@keyframes shortType{
+    0%{
+        transform: scaleX(1);
+    }
+    100%{
+        transform: scaleX(0.77);
+    }
+}
+@keyframes cursorBlink {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}

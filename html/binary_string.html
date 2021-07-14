@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-info="p6">Epic Puzzle</title>
+    <link rel="stylesheet" href="../generic_styles.css">
+    <link rel="stylesheet" href="../css/page6.css">
+    <script src="../js/progressButton.js"></script>
+    <script src="../js/page6.js" type="module" defer></script>
+</head>
+<body>
+    <div class="supreme-container">
+        <div class="scan-div"></div>
+        <a href="../index.html" class="home-btn">H</a>
+        <p class="long-header">01100010011100100111100001101111 <br>
+            011101100110010001100100001111010110100100111011 <br>
+            011011100110100101111001011100000110110101101001001110110110100101101111 <br>
+            011101000111000001111000</p>
+
+        <div class="form-container">
+            <h3 class="form-header">Răspunsul tău:</h3>
+            <input type="text" name="answer" id="answer">
+            <div class="form-btns-wrapper">
+                <button class="form-btn">Submit</button>
+                <button class="form-btn2 form-fake-btn">Sari peste</button>
+            </div>
+        </div>
+        <div class="validating"></div>
+        <!-- isimeri.github.io/epic-puzzle/hmtl/relaxation.html   mesaj din trecut: să nu uiti să ștergi acest link -->
+
+        <div class="cb-container">
+            <input type="checkbox" name="cb" id="progress-cb" class="cb" onchange="updateProgressButtons(this)">    <!--hidden -->
+            <label for="progress-cb"></label>
+            <div class="btn-led"></div>
+        </div>
+        <div class="modal">
+            <button class="close-modal"></button>
+            <p>Nu, lmao</p>
+        </div>
+    </div>
+</body>
+</html>
